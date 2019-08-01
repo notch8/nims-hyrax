@@ -83,11 +83,7 @@ class Publication < ActiveFedora::Base
 
   property :complex_source, predicate: ::RDF::Vocab::ESciDocPublication.source, class_name: 'ComplexSource'
 
-<<<<<<< HEAD
   property :supervisor_approval, predicate: ::RDF::Vocab::NimsRdp['supervisor-approval']
-=======
-  property :application_number, predicate: ::RDF::Vocab::NimsRdp['application-number']
->>>>>>> add application_number to Dataset and Publication
 
   # This must be included at the end, because it finalizes the metadata
   # schema (by adding accepts_nested_attributes)
