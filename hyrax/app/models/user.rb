@@ -24,7 +24,7 @@ class User < ApplicationRecord
   # user class to get a user-displayable login/identifier for
   # the account.
   def to_s
-    username
+    profile_id
   end
 
   def self.find_or_create_system_user(user_key)
@@ -35,5 +35,9 @@ class User < ApplicationRecord
   def ldap_before_save
     self.email = Devise::LDAP::Adapter.get_ldap_param(username, "mail").first
     self.password = Devise.friendly_token[0, 20]
+  end
+
+  def user_key
+    to_s
   end
 end
