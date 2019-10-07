@@ -84,4 +84,5 @@ gem 'willow_sword', git: 'https://github.com/CottageLabs/willow_sword.git', :bra
 group :test do
   gem 'simplecov', require: false
   gem 'capybara'
+  gem 'rails-controller-testing'
 end
