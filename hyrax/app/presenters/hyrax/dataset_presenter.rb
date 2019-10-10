@@ -8,5 +8,6 @@ module Hyrax
       :complex_instrument, :origin_system_provenance, :properties_addressed,
       :complex_relation, :specimen_set, :complex_specimen_type,
       :synthesis_and_processing, :custom_property, to: :solr_document
+    include Hyrax::NimsPresentAttributes
   end
 end
