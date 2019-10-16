@@ -42,6 +42,7 @@ module Importers
         # Open publications xml file
         work_ids = []
         pub_xml = File.open(metadata_file) { |f| Nokogiri::XML(f) }
+        rows = File.read('/data/data/escidoc_ids.txt').split
         # puts 'File read'
         # Each xml file has multiple items
         pub_xml.xpath('/root/item').each do |item|
@@ -61,6 +62,7 @@ module Importers
             attributes[:visibility] = 'restricted'
           end
           next unless attributes[:visibility] == 'open'
+          next if rows.include?(attributes[:complex_identifier_attributes].first[:identifier])
           # set dummy supervisor approval
           attributes[:supervisor_approval] = ['imported from PubMan']
           # Get files
