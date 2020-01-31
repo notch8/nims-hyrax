@@ -80,6 +80,7 @@ gem 'devise_cas_authenticatable'
 gem 'cancancan', '~> 1.17' # NB: locked to an older version because of hyrax > hydra-editor
 
 gem 'riiif', '~> 2.0'
+gem 'json-api-vanilla', '~> 1.0.2'
 
 group :production do
   gem 'airbrake', '~> 5.0'
