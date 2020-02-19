@@ -221,6 +221,9 @@ en:
           title_tesim: Title
   hyrax:
     account_name: My Institution Account Id
+    base:
+      show_actions:
+        attach_child: Attach Work as Child
     directory:
       suffix: "@example.org"
     footer:
@@ -231,6 +234,8 @@ en:
     institution_name_full: The Institution Name
     product_name: MDR
     product_twitter_handle: "@SamveraRepo"
+    work_button_row:
+      attach_child: Attach Work as Child
     works:
       form:
         tab:
