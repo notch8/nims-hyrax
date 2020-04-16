@@ -185,6 +185,8 @@ module Hyrax
       [:id,
        :_destroy,
        {
+         last_name: [],
+         first_name: [],
          name: [],
          role: [],
          complex_affiliation_attributes: permitted_affiliation_params,
